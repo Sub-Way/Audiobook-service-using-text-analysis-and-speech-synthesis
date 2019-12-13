@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    function test(){
+    var text_data=$('#SensorID').val();
+    $.ajax({
+    type:'POST',
+    url:'http://localhost:5000/request',
+    data:{
+    SensorID:text_data
+    },
+    dataType:'text',
+    success:function(result){
+    $("#emotion_text").val(result);
+    },
+    error:function(xtr,status,error){
+    alert(xtr+":"+status+":"+error);
+    }
+    });
+    }
+
+</script>
+<!-- 스크립트에서 sucess 시에 오디오 폼 생성되게 하면 끝-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/style.css')}}">
+    <script src="{{url_for('static',filename='JS/click3.js')}}"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+ <div class="header--inner">
+     <div class="logo">
+         <a class="logo--link" href="/info">
+             <span id="font_logo">END GAME</span>
+         </a>
+     </div>
+
+ </div>
+</div>
+<div class="wrapper">
+
+    <div class="synthesis">
+
+    <input class="text_class" type="text" name="SensorID" id="SensorID" minlength="10" maxlength="100" size="50"/>
+        <input type="text" id="emotion_text"/>
+    <input type="button" value="run" onclick="test()"/>
+        <p><br></p>
+        <p><br></p>
+<div class="old_sample">
+<audio type="audio/wav" src="{{ url_for('static',filename='happy_old.wav')}}" controls=""></audio>
+
+<audio  src="{{ url_for('static',filename='angry_old.wav')}}" controls=""></audio>
+</div>
+
+
+    </div>
+    <div class="text_sample">
+        <p>Samples</p>
+    </div>
+
+    <div class="background_c">
+
+
+<div class="synthesis_sample">
+    <p class="p_css">All i want for Christmas is you</p>
+    <p><br></p>
+    <audio src="{{ url_for('static',filename='happy.mp3')}}" controls=""></audio>
+
+</div>
+<div class="synthesis_sample">
+    <p class="p_css">Why so serious!</p>
+    <p><br></p>
+    <audio src="{{ url_for('static',filename='angry.mp3')}}" controls=""></audio>
+
+</div>
+
+<div class="synthesis_sample">
+    <p class="p_css">I'm so sad so very very sad</p>
+    <p><br></p>
+    <audio src="{{ url_for('static',filename='sad.mp3')}}" controls=""></audio>
+
+</div>
+<div class="synthesis_sample">
+    <p class="p_css">It was boring for me.</p>
+    <p><br></p>
+    <audio src="{{ url_for('static',filename='boring.mp3')}}" controls=""></audio>
+
+</div>
+<div class="synthesis_sample">
+    <p class="p_css">Computer networking a top down approach</p>
+    <p><br></p>
+    <audio src="{{ url_for('static',filename='neutral.wav')}}" controls=""></audio>
+
+</div>
+    </div>
+    <div class="book_title">
+        <p class="books">Books</p>
+    </div>
+
+<div class="book-menu">
+    <div class="inner-book-menu">
+
+
+<table class="book-menu-table" border="1">
+    <tr>
+        <td class="td_class">
+            <a onclick="book1()">
+                <img class="book_img" src="{{url_for('static',filename='IMG/1.JPG')}}">
+            </a>
+
+        </td>
+
+        <td class="book_info">
+            <p>
+                Title: TYRONE THE HORRIBLE
+            </p>
+            <p><br></p>
+            <p>
+                Author: HANS WILHELM
+            </p>
+            <p><br></p>
+            <p>
+               contents: Horrible Tyrone is a large, toothy dinosaur who bullies small Boland, until Boland comes up with a creative idea to deal with the bully.
+            </p>
+        </td>
+    </tr>
+   <tr>
+        <td class="td_class">
+            <a onclick="book2()">
+                <img class="book_img" src="{{url_for('static',filename='book2_img/1.JPG')}}">
+            </a>
+        </td>
+        <td class="book_info">
+             <p>
+                Title: Totally Bored Boris!
+            </p>
+            <p><br></p>
+            <p>
+                Author: HANS WILHELM
+            </p>
+            <p><br></p>
+
+            <p>
+                contents: Boris, the bear, is very bored, until he joins the party his sister and her friends are having.
+            </p>
+        </td>
+    </tr>
+
+   <tr>
+        <td class="td_class">
+            <a onclick="book3()">
+                <img class="book_img" src="{{url_for('static',filename='book3_img/1.JPG')}}">
+            </a>
+        </td>
+        <td class="book_info">
+             <p>
+                Title: Never Lonely Again
+            </p>
+            <p><br></p>
+            <p>
+                Author: HANS WILHELM
+            </p>
+            <p><br></p>
+        </td>
+    </tr>
+
+
+</table>
+ </div>
+</div>
+
+</div>
+<div class="footer">
+
+</div>
+</body>
+</html>

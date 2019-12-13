@@ -1,0 +1,162 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: middle;
+  box-sizing: border-box;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	display: block;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+html, body{
+	height:100%;
+}
+.audio{
+width:100px;
+height:100px;
+}
+
+	.header{
+	display: block;
+	position:fixed;
+	text-align: center;
+	width:100%;
+	z-index: 1;
+	background: red;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    height:100px;
+	}
+	.header--inner{
+	position: relative;
+	max-width: 1080px;
+	min-height: 70px;
+	margin: 0 auto;
+
+
+	}
+	.header--inner:after{
+		display: block;
+		content:"";
+		clear:both;
+	}
+	.wrapper{
+	display:inline-block;
+    min-width: 700px;
+    margin: 150px 0 auto auto;
+    height: auto;
+	}
+    .book-menu{
+    margin: 100px 100px auto auto
+    }
+
+	.menu{
+		display:inline-block;
+		overflow: hidden;
+		float:right;
+		margin-top:18px;
+		text-align: right;
+	}
+	.menu--inner{
+		width: auto;
+		border:0;
+	}
+	.menu li{
+		display: inline-block;
+		margin-right: -1px;
+	    line-height: 1.5;
+	    padding: 0;
+	    border-right: 0px solid #ddd;
+	}
+	.menu li a:after{
+		display: block;
+		    position: absolute;
+		    top: 50%;
+		    right: 0;
+		    transform: translateY(-50%);
+		    -ms-transform: translateY(-50%);
+		    width: 1px;
+		    height: 12px;
+		    content: "";
+		    border-right: 1px solid #333;
+	}
+	.menu li a{
+		position: relative;
+	display: block;
+	padding: 5px 15px 4px;
+	border: 0;
+	color: #333;
+	font-size: 15px;
+	line-height: 28px;
+	transition: all 0.1s;
+	}
+	.logo{
+		position: absolute;
+		    left: 10px;
+		    top: 50%;
+		    display: block;
+		    width: auto;
+		    height: auto;
+		    margin: 0 0 0 10px;
+		    transform: translateY(-50%);
+	}
+	.logo a{
+		margin-top:10px;
+		display: block;
+	    height: 60px;
+	    padding: 3px 0;
+	    color: #222;
+	    font-size: 28px;
+	    font-weight: 500;
+	    letter-spacing: -0.075em;
+	    line-height: 1.6;
+	    vertical-align: top;
+			cursor: pointer;
+	}
+	.logo a span{
+
+	}
+	a {
+	    text-decoration: none;
+	    outline: none;
+	}

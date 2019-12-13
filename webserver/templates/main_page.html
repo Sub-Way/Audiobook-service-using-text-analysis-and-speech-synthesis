@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    function test(){
+    var text_data=$('#SensorID').val();
+    $.ajax({
+    type:'POST',
+    url:'http://localhost:5000/request',
+    data:{
+    SensorID:text_data
+    },
+    dataType:'text',
+    success:function(result){
+    alert(result);
+    },
+    error:function(xtr,status,error){
+    alert(xtr+":"+status+":"+error);
+    }
+    });
+    }
+
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS\style.css')}}">
+    <title>Title</title>
+</head>
+<body>
+<div class="header">
+ <h1> header</h1>
+</div>
+<div class="wrapper">
+ <h1> wrapper </h1>
+    <input type="text" name="SensorID" id="SensorID"/>
+    <input type="button" value="run" onclick="test()"/>
+
+<audio src="{{ url_for('static',filename='test.wav')}}" controls="controls"></audio>
+<div class="book-menu">
+<ul>
+    <li>
+        <img class="book_img" src="">
+    </li>
+    <li>
+        gg
+    </li>
+</ul>
+
+</div>
+
+</div>
+<div class="footer">
+ <h1> footer</h1>
+</div>
+</body>
+</html>

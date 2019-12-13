@@ -1,0 +1,80 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <title>Flipbook</title>
+    <script type = text/javascript src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script type= text/javascript src="{{url_for('static',filename='JS/turn.min.js')}}"></script>
+
+    <style>
+        body{
+            overflow:hidden;
+        }
+        #flipbook .page{
+            background-color:white;
+        }
+         #flipbook{
+            background-color:white;
+            margin: 5% auto;
+            width: 1100px;
+            height: 700px;
+        }
+        #flipbook .shadow{
+        -webkit-box-shadow: 0 4px 10px #666;
+        -moz-box-shadow: 0 4px 10px  #666;
+        -ms-box-shadow: 0 4px 10px  #666;
+        -o-box-shadow: 0 4px 10px #666;
+        box-shadow: 0 4px 10px #666;
+        }
+        #flipbook .page-wrapper{
+         -webkit-perspective:2000px;
+         -moz-perspective: 2000px;
+         -ms-perspective: 2000px;
+         perspective: 2000px;
+}
+    </style>
+</head>
+<body>
+        <audio autoplay> <source src="{{url_for('static',filename='audio/book1.wav')}}" type="audio/wav"> </audio>
+        <div id="flipbook">
+
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/1.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/2.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/3.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/4.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/5.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/6.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/7.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/8.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/9.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/10.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/11.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/12.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/13.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/14.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/15.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/16.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/17.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/18.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/19.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/20.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/21.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/22.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/23.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/24.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/25.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/26.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/27.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/28.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/29.JPG')}}"> </div>
+                <div  class = "hard"> <img src="{{url_for('static',filename='IMG/30.JPG')}}"> </div>
+				<div  class = "hard"> <img src="{{url_for('static',filename='IMG/31.JPG')}}"> </div>
+                <!-- <div  class = "hard"> <img src="img/30.JPG"> </div> -->
+            </div>
+    <script type="text/javascript">
+	$("#flipbook").turn({
+        gradients:true,
+        acceleration:true
+	});
+</script>
+    </body>
+</html>
